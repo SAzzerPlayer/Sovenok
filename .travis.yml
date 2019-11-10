@@ -7,3 +7,8 @@ node_js:
 branches:
   only:
     - master
+deploy:
+  provider: heroku
+  app: "Имя вашего приложения в Heroku"
+  api_key:
+    secure: "00745758-e855-4277-9e44-c15fe30b35d3"
