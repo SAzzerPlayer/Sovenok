@@ -10,7 +10,7 @@ class MainInfoTable extends React.Component{
             <Grid container
             justify={"center"}
             alignItems={"center"}
-            style={{backgroundColor:"snow"}}
+            style={{backgroundColor:"snow",marginTop:10,marginBottom:10}}
                   className={classes.Table}
             >
                 <Grid item xs={4}>

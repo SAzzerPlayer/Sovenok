@@ -11,26 +11,50 @@ class BooksKeyWords extends React.Component{
         return(
             <List>
                 <ListItem style={{flexDirection:"row"}}>
-                    <FiberManualRecordIcon small/>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
                     <Button>
                         <u><i>Студенты</i></u>
                     </Button>
                 </ListItem>
                 <ListItem style={{flexDirection:"row"}}>
-                    <FiberManualRecordIcon small/>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
                     <Button><u><i>Школа</i></u></Button>
                 </ListItem>
                 <ListItem style={{flexDirection: "row"}}>
-                    <FiberManualRecordIcon small/>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
                     <Button><u><i>Заполярье</i></u></Button>
                 </ListItem>
                 <ListItem style={{flexDirection: "row"}}>
-                    <FiberManualRecordIcon small/>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
                     <Button><u><i>Существа</i></u></Button>
                 </ListItem>
                 <ListItem style={{flexDirection: "row"}}>
-                    <FiberManualRecordIcon small/>
-                    <Button><u><i>РПГ</i></u></Button>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
+                    <Button><u><i>Океан</i></u></Button>
+                </ListItem>
+                <ListItem style={{flexDirection: "row"}}>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
+                    <Button><u><i>Англия</i></u></Button>
+                </ListItem>
+                <ListItem style={{flexDirection: "row"}}>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
+                    <Button><u><i>Гонки</i></u></Button>
+                </ListItem>
+                <ListItem style={{flexDirection: "row"}}>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
+                    <Button><u><i>Судно</i></u></Button>
+                </ListItem>
+                <ListItem style={{flexDirection: "row"}}>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
+                    <Button><u><i>Посёлок</i></u></Button>
+                </ListItem>
+                <ListItem style={{flexDirection: "row"}}>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
+                    <Button><u><i>Вокруг мира</i></u></Button>
+                </ListItem>
+                <ListItem style={{flexDirection: "row"}}>
+                    <FiberManualRecordIcon small style={{fontSize:12}}/>
+                    <Button><u><i>Сыщик</i></u></Button>
                 </ListItem>
             </List>
         );

@@ -34,7 +34,9 @@ class InKey extends React.Component{
               <BooksKeyWords/>
             </Grid>
           </Grid>
+          <MainInfoTable/>
         </WorkContainer>
+      <HeaderBarMenu/>
     </div>
   }
 }
