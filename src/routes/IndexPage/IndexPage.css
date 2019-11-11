@@ -1,0 +1,11 @@
+.App{
+  display: flex;
+  flex: 1;
+  background-color: #f5f5f5;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Table{
+  box-shadow: rgba(0,0,0,0.15) 0px 4px 4px 0px;
+}

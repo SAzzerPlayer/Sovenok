@@ -5,13 +5,17 @@ import {Box} from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import classes from './HeaderBarMenu.css';
 
 
 class HeaderBarMenu extends React.Component{
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {
+            isLogged: false
+        };
     }
 
     render(){
@@ -19,12 +23,12 @@ class HeaderBarMenu extends React.Component{
             <React.Fragment>
                 <AppBar position="static" style={{flexDirection:'row', justifyContent:"space-between"}}>
                     <Toolbar>
-                        <Button color="inherit" style={{margin:10}}>
+                        <Button color="inherit" style={{margin:10}} href={"/"}>
                             <img src={require("./logo3.jpg")} width={32} height={32} alt={"logo"}/>
                         </Button>
-                        <Button color="inherit" style={{margin:10}}>Books</Button>
-                        <Button color="inherit" style={{margin:10}}>Articles</Button>
-                        <Button color="inherit" style={{margin:10}}>Authors</Button>
+                        <Button color="inherit" style={{margin:10}} href={"/books"}>Книги</Button>
+                        <Button color="inherit" style={{margin:10}} href={"/news"}>Новости</Button>
+                        <Button color="inherit" style={{margin:10}} href={"/authors"}>Авторы</Button>
 
                     </Toolbar>
                     <Toolbar>
@@ -38,13 +42,15 @@ class HeaderBarMenu extends React.Component{
                                     borderRadius: 16,
                                     padding: 5
                                 }}
-                                placeholder={"Search..."}/>
-                            <Button color="inherit" style={{margin:10}}>
+                                placeholder={"Поиск..."}/>
+                            <Button color="inherit" style={{margin:10}} href={"/search"}>
                                 <SearchIcon width={32} height={32}/>
                             </Button>
                         </Box>
-                        <Button color="inherit" style={{margin:10}}>Login</Button>
-                        <Button color="inherit" style={{margin:10}}>Register</Button>
+                        {!this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/login"}>Вход</Button>}
+                        {!this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/registration"}>Регистрация</Button>}
+                        {this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/account"}><AccountCircleIcon/><b>Личный профиль</b></Button>}
+                        {this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/logout"}><ExitToAppIcon/></Button>}
                     </Toolbar>
                 </AppBar>
             </React.Fragment>

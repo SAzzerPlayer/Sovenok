@@ -1,0 +1,28 @@
+.root{
+    margin-top:38px;
+    margin-bottom:38px;
+    box-shadow: rgba(0,0,0,0.15) 0px 4px 4px 0px;
+}
+.image{
+    background-image: url(https://source.unsplash.com/random);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.paper{
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatar{
+    margin: 6px;
+    background-color: white;
+}
+.form{
+    width: 100%;
+    margin-top: 6px;
+}
+.submit{
+    margin: 8px;
+}
