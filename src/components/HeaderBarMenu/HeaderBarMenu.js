@@ -20,7 +20,7 @@ class HeaderBarMenu extends React.Component{
                 <AppBar position="static" style={{flexDirection:'row', justifyContent:"space-between"}}>
                     <Toolbar>
                         <Button color="inherit" style={{margin:10}}>
-                            <img src={require("./logo3.jpg")} width={48} height={48} sizes={"cover"}/>
+                            <img src={require("./logo3.jpg")} width={32} height={32} alt={"logo"}/>
                         </Button>
                         <Button color="inherit" style={{margin:10}}>Books</Button>
                         <Button color="inherit" style={{margin:10}}>Articles</Button>
@@ -39,7 +39,7 @@ class HeaderBarMenu extends React.Component{
                                     padding: 5
                                 }}
                                 placeholder={"Search..."}/>
-                            <Button color="inherit">
+                            <Button color="inherit" style={{margin:10}}>
                                 <SearchIcon width={32} height={32}/>
                             </Button>
                         </Box>
