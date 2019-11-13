@@ -24,9 +24,9 @@ class IndexPage extends React.Component{
                     <Grid item xs={8} className={classes.Table} style={{backgroundColor: "snow",padding:4}} spacing={2}>
                         <h2>Подборки книг по разным критериям:</h2>
                         <Divider/>
-                        <BooksCarousel/>
-                        <BooksCarousel/>
-                        <BooksCarousel/>
+                        <BooksCarousel title={"Топ в разных жанрах"}/>
+                        <BooksCarousel title={"Бестридеры"}/>
+                        <BooksCarousel title={"Новинки"}/>
                     </Grid>
                     <Grid item xs={1}/>
                     <Grid item xs={3} className={classes.Table} style={{backgroundColor:"snow",padding:4}} >

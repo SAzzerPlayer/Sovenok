@@ -13,7 +13,7 @@ class BooksCarousel extends React.Component{
     render(){
         return(
           <Container >
-            <h2>{this.state.genre}</h2>
+            <h3>{this.props.title}</h3>
               <Divider/>
               <Grid
                   style={{margin:5}}

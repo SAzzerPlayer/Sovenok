@@ -1,12 +1,14 @@
 import React from "react";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import {Box} from "@material-ui/core";
+import {Box,Popover,Typography} from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import SideBooksMenu from '../SideBooksMenu/SideBooksMenu';
 import classes from './HeaderBarMenu.css';
 
 
@@ -14,19 +16,50 @@ class HeaderBarMenu extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            isLogged: false
+            isLogged: false,
+            popoverOpen:false
         };
     }
-
+    handleClose = () => {
+        this.setState({
+            popoverOpen : false
+        })
+    };
+    handleClick = () => {
+        this.setState({
+            popoverOpen : true
+        })
+    };
     render(){
         return (
             <React.Fragment>
-                <AppBar position="static" style={{flexDirection:'row', justifyContent:"space-between"}}>
+                <AppBar aria-describedby={"books"} position="static" style={{flexDirection:'row', justifyContent:"space-between"}}>
                     <Toolbar>
                         <Button color="inherit" style={{margin:10}} href={"/"}>
                             <img src={require("./logo3.jpg")} width={32} height={32} alt={"logo"}/>
                         </Button>
-                        <Button color="inherit" style={{margin:10}} href={"/books"}>Книги</Button>
+                        <Button color="inherit" style={{margin:10}} onClick={this.handleClick}>
+                            Книги
+                            <ArrowDropDownIcon style={{fontSize:24}}/>
+                        </Button>
+                        <Popover
+                            id={"books"}
+                            anchorReference="anchorPosition"
+                            anchorPosition={{ top: 75, left: 100 }}
+                            open={this.state.popoverOpen}
+                            anchorEl={this.state.popoverOpen}
+                            onClose={this.handleClose}
+                            anchorOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                        >
+                            <SideBooksMenu/>
+                        </Popover>
                         <Button color="inherit" style={{margin:10}} href={"/news"}>Новости</Button>
                         <Button color="inherit" style={{margin:10}} href={"/authors"}>Авторы</Button>
 
