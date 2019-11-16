@@ -16,7 +16,7 @@ class HeaderBarMenu extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            isLogged: false,
+            isLogged: true,
             popoverOpen:false
         };
     }
@@ -80,10 +80,10 @@ class HeaderBarMenu extends React.Component{
                                 <SearchIcon width={32} height={32}/>
                             </Button>
                         </Box>
-                        {!this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/login"}>Вход</Button>}
+                        {!this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/login"} onClick={()=>{this.setState({isLogged: true})}}>Вход</Button>}
                         {!this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/registration"}>Регистрация</Button>}
-                        {this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/account"}><AccountCircleIcon/><b>Личный профиль</b></Button>}
-                        {this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/logout"}><ExitToAppIcon/></Button>}
+                        {this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/account"}><AccountCircleIcon style={{marginRight:5}}/><b>Личный профиль</b></Button>}
+                        {this.state.isLogged && <Button color="inherit" style={{margin:10}} href={"/logout"} onClick={()=>{this.setState({isLogged: false})}}><ExitToAppIcon/></Button>}
                     </Toolbar>
                 </AppBar>
             </React.Fragment>

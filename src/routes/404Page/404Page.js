@@ -3,7 +3,7 @@ import WorkContainer from '../../container/WorkContainer/WorkContainer';
 import {Grid,Icon} from '@material-ui/core';
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 import classes from './404Page.css';
-
+import Loading from '../../components/Loading/Loading';
 const Page404 = () => {
     return(
         <WorkContainer>
@@ -16,7 +16,8 @@ const Page404 = () => {
                     <h1>Ошибка 404. Страница не найдена!</h1>
                 </Grid>
                 <Grid item xs={4}>
-                    <ErrorOutlineIcon style={{fontSize:256, color:'purple'}}/>
+                    {false && <ErrorOutlineIcon style={{fontSize:256, color:'purple'}}/>}
+                    <Loading/>
                 </Grid>
             </Grid>
         </WorkContainer>

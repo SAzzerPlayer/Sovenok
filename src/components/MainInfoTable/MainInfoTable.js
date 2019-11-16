@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon,Divider,List,ListItem,ListItemText,Grid,Box,Container,Typography} from "@material-ui/core";
+import {Link,Divider,List,ListItem,ListItemText,Grid,Button} from "@material-ui/core";
 import classes from './MainInfoTable.css';
 import FaceIcon from '@material-ui/icons/Face';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
@@ -40,19 +40,23 @@ class MainInfoTable extends React.Component{
                     <h3>Раздел помощи для :</h3>
 
                     <List component="nav" aria-label={"main"}>
-                        <ListItem button>
-                            <FaceIcon
-                                color={"inherit"}
-                                style={{marginRight: 10}}/>
-                            Читателей
-                        </ListItem>
+                        <Link href={"/help"} style={{color:"black"}}>
+                            <ListItem button>
+                                <FaceIcon
+                                    color={"inherit"}
+                                    style={{marginRight: 10}}/>
+                                Читателей
+                            </ListItem>
+                        </Link>
                         <Divider style={{margin:5}}/>
-                        <ListItem button>
-                            <EmojiPeopleIcon
-                                color={"inherit"}
-                                style={{marginRight: 10}}/>
-                            Авторов
-                        </ListItem>
+                        <Link href={"/help"} style={{color:"black"}}>
+                            <ListItem button href={"/help/reader"}>
+                                <EmojiPeopleIcon
+                                    color={"inherit"}
+                                    style={{marginRight: 10}}/>
+                                Авторов
+                            </ListItem>
+                        </Link>
                         <Divider/>
                     </List>
                 </Grid>
