@@ -1,5 +1,6 @@
 import React from 'react';
-import {Grid,Link,Divider,Container,List,ListItem,ListItemIcon} from '@material-ui/core';
+import {Grid,Divider,Container,List,ListItem,ListItemIcon} from '@material-ui/core';
+import {NavLink} from "react-router-dom";
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
 import classes from './SideBooksMenu.css';
 const SideBooksMenu = () => {
@@ -22,23 +23,23 @@ const SideBooksMenu = () => {
                     <List>
                         <ListItem>
                                 <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                                <Link className={classes.Link}>Все жанры</Link>
+                                <NavLink className={classes.Link} to={"/books"}>Все жанры</NavLink>
                         </ListItem>
                         <ListItem>
                                 <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                                <Link className={classes.Link}>Детектив</Link>
+                                <NavLink className={classes.Link} to={"/books"}>Детектив</NavLink>
                         </ListItem>
                         <ListItem>
                                 <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                                <Link className={classes.Link}>Фэнтези</Link>
+                                <NavLink className={classes.Link} to={"/books"}>Фэнтези</NavLink>
                         </ListItem>
                         <ListItem>
                                 <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                                <Link className={classes.Link}>Боевик</Link>
+                                <NavLink className={classes.Link} to={"/books"}>Боевик</NavLink>
                         </ListItem>
                         <ListItem>
                                 <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                                <Link className={classes.Link}>Проза</Link>
+                                <NavLink className={classes.Link} to={"/books"}>Проза</NavLink>
                         </ListItem>
                     </List>
                 </Grid>
@@ -46,23 +47,23 @@ const SideBooksMenu = () => {
                     <List>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Мистика\Ужасы</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Мистика\Ужасы</NavLink>
                         </ListItem>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Триллеры</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Триллеры</NavLink>
                         </ListItem>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Фантастика</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Фантастика</NavLink>
                         </ListItem>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Любовные романы</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Любовные романы</NavLink>
                         </ListItem>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Разное</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Разное</NavLink>
                         </ListItem>
                     </List>
                 </Grid>
@@ -80,11 +81,11 @@ const SideBooksMenu = () => {
                     <List>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Популярные</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Популярные</NavLink>
                         </ListItem>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Новинки</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Новинки</NavLink>
                         </ListItem>
                     </List>
                 </Grid>
@@ -92,11 +93,11 @@ const SideBooksMenu = () => {
                     <List>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Обновленные</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Обновленные</NavLink>
                         </ListItem>
                         <ListItem>
                             <FiberManualRecordOutlinedIcon style={{fontSize:8,margin:5}}/>
-                            <Link className={classes.Link}>Бестридеры</Link>
+                            <NavLink className={classes.Link} to={"/books"}>Бестридеры</NavLink>
                         </ListItem>
                     </List>
                 </Grid>

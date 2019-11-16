@@ -1,0 +1,16 @@
+.Table{
+    box-shadow: rgba(0,0,0,0.15) 0px 4px 4px 0px;
+    background-color: snow;
+    padding: 15px;
+    border-radius:32px;
+}
+.FontTable{
+    background-image: url(https://i.freza.co/diygoods/70983/oboi_na_bumagnoy_osnove053h10_m_vishitiy_list_fon_begeviy_40732_1_pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: rgba(0,0,0,0.15) 0px 4px 4px 0px;;
+}

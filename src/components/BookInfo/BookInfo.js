@@ -1,6 +1,7 @@
 import React from 'react';
 import {Grid,Link} from '@material-ui/core';
-
+import {NavLink} from 'react-router-dom';
+import classes from './BookInfo.css';
 class BookInfo extends React.Component{
     constructor(props){
         super(props);
@@ -13,7 +14,7 @@ class BookInfo extends React.Component{
                     <img width={90} height={120} style={{backgroundColor: "skyblue"}}/>
                 </Grid>
                 <Grid container item xs={10} direction={"column"} justify={"space-between"}>
-                    <Grid item xs><Link><b>Название книги</b></Link><i style={{fontSize:12, color:'gray'}}> / жанр книги</i></Grid>
+                    <Grid item xs><NavLink className={classes.Link} to={"/book"}><b>Название книги</b></NavLink><i style={{fontSize:12, color:'gray'}}> / жанр книги</i></Grid>
                     <Grid item xs><i><u>Аннотация книги lorem ipsum fffff ssssss</u></i></Grid>
                     <Grid item xs><b>Автор книги</b></Grid>
                     <Grid container item xs direction={"row"} justify={"space-between"}>

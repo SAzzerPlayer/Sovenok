@@ -2,31 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9eca758-a499-4593-95aa-348a5e146f9b" name="Default Changelist" comment="Has been added Login, Registration, 404Error pages and installed Routes.">
-      <change afterPath="$PROJECT_DIR$/src/components/BookInfo/BookInfo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/BookInfo/BookInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loading/Loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/AboutPage/AboutPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/AboutPage/AboutPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/AboutPage/logo3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/AccountPage/AccountPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/AccountPage/AccountPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/HelpPage/HelpPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/HelpPage/HelpPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hhh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BookBanner/BookBanner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BookBanner/BookBanner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BookBanner/page.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BookBanner/page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BooksSortBy/BooksSortBy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/BooksSortBy/BooksSortBy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/RecommendContainer/RecommendContainer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/container/RecommendContainer/RecommendContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/BookPage/BookPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/BookPage/BookPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/BookPage/page.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/BooksPage/BooksPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/BooksPage/BooksPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/EditorPage/EditorPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/EditorPage/EditorPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/ReaderPage/ReaderPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/ReaderPage/ReaderPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookInfo/BookInfo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookInfo/BookInfo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookInfo/BookInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookInfo/BookInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BottomBarMenu/BottomBarMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BottomBarMenu/BottomBarMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HeaderBarMenu/HeaderBarMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderBarMenu/HeaderBarMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainInfoTable/MainInfoTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainInfoTable/MainInfoTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/libs/api/DB.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/404Page/404Page.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/404Page/404Page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideBooksMenu/SideBooksMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBooksMenu/SideBooksMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/AccountPage/AccountPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/AccountPage/AccountPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/IndexPage/IndexPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/IndexPage/IndexPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/SearchPage/SearchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/SearchPage/SearchPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,51 +54,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/AccountPage/AccountPage.js">
+        <entry file="file://$PROJECT_DIR$/src/components/SideBooksMenu/SideBooksMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+            <state relative-caret-position="374">
+              <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="105" selection-start-line="15" selection-start-column="105" selection-end-line="15" selection-end-column="105" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/HelpPage/HelpPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="29" column="87" lean-forward="true" selection-start-line="29" selection-start-column="87" selection-end-line="29" selection-end-column="87" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/AccountPage/AccountPage.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="3" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -93,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/BookInfo/BookInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -103,22 +78,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.js">
+        <entry file="file://$PROJECT_DIR$/src/routes/BookPage/BookPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" column="88" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
+            <state relative-caret-position="187">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
-                <element signature="e#1#27#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#1387#3759#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.js">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="73" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
+            <state relative-caret-position="228">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/BookBanner/BookBanner.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -127,19 +115,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/WorkContainer/WorkContainer.css">
+        <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="34">
+              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.css">
+        <entry file="file://$PROJECT_DIR$/src/components/BooksSortBy/BooksSortBy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="238">
+              <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/BookBanner/BookBanner.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/BookInfo/BookInfo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -162,61 +180,61 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/BottomAboutMenu/BottomAboutMenu.js" />
-        <option value="$PROJECT_DIR$/src/routes/indexPage/indexPage.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/components/BottomBarMenu/BottomBarMenu.js" />
-        <option value="$PROJECT_DIR$/src/routes/404Page/404Page.css" />
-        <option value="$PROJECT_DIR$/src/routes/LoginPage/LoginPage.css" />
-        <option value="$PROJECT_DIR$/src/routes/LoginPage/LoginPage.js" />
-        <option value="$PROJECT_DIR$/src/routes/RegistrationPage/RegistrationPage.css" />
-        <option value="$PROJECT_DIR$/src/routes/RegistrationPage/RegistrationPage.js" />
-        <option value="$PROJECT_DIR$/src/container/BooksCarousel/BooksCarousel.js" />
-        <option value="$PROJECT_DIR$/src/routes/SupportPage/SupportPage.js.css" />
-        <option value="$PROJECT_DIR$/src/routes/SupportPage/SupportPage.css" />
-        <option value="$PROJECT_DIR$/src/routes/SupportPage/SupportPage.js" />
-        <option value="$PROJECT_DIR$/public/index.css" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/SideBooksMenu/SideBooksMenu.css" />
-        <option value="$PROJECT_DIR$/src/components/SideBooksMenu/SideBooksMenu.js" />
-        <option value="$PROJECT_DIR$/src/libs/api/GET_API.js" />
-        <option value="$PROJECT_DIR$/src/routes/SearchPage/SearchPage.css" />
-        <option value="$PROJECT_DIR$/src/libs/api/DB.js" />
-        <option value="$PROJECT_DIR$/server/app.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/src/routes/AboutPage/AboutPage.js" />
         <option value="$PROJECT_DIR$/src/routes/AboutPage/AboutPage.css" />
-        <option value="$PROJECT_DIR$/src/components/HeaderBarMenu/HeaderBarMenu.js" />
         <option value="$PROJECT_DIR$/src/routes/Help/Reader/HelpReaderPage.css" />
         <option value="$PROJECT_DIR$/src/routes/Help/Writer/HelpWriterPage.css" />
         <option value="$PROJECT_DIR$/src/routes/Help/Reader/HelpReaderPage.js" />
         <option value="$PROJECT_DIR$/src/routes/Help/Writer/HelpWriterPage" />
         <option value="$PROJECT_DIR$/src/routes/Help/Writer/HelpWriterPage.js" />
         <option value="$PROJECT_DIR$/src/routes/HelpPage/HelpPage.ts" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/routes/SearchPage/SearchPage.js" />
         <option value="$PROJECT_DIR$/src/routes/HelpPage/HelpPage.css" />
-        <option value="$PROJECT_DIR$/src/components/MainInfoTable/MainInfoTable.js" />
-        <option value="$PROJECT_DIR$/src/routes/IndexPage/IndexPage.js" />
         <option value="$PROJECT_DIR$/src/components/Loading/Loading.js" />
         <option value="$PROJECT_DIR$/src/routes/404Page/404Page.js" />
         <option value="$PROJECT_DIR$/node_modules/react-gif-player/package.json" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/BookInfo/BookInfo.css" />
         <option value="$PROJECT_DIR$/src/routes/AccountPage/AccountPage.css" />
-        <option value="$PROJECT_DIR$/src/components/BookInfo/BookInfo.js" />
         <option value="$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.css" />
         <option value="$PROJECT_DIR$/src/container/WorkContainer/WorkContainer.js" />
-        <option value="$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.js" />
         <option value="$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.css" />
-        <option value="$PROJECT_DIR$/src/routes/AccountPage/AccountPage.js" />
         <option value="$PROJECT_DIR$/src/routes/HelpPage/HelpPage.js" />
         <option value="$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.js" />
+        <option value="$PROJECT_DIR$/hhh" />
+        <option value="$PROJECT_DIR$/src/components/MainInfoTable/MainInfoTable.js" />
+        <option value="$PROJECT_DIR$/firebase.json" />
+        <option value="$PROJECT_DIR$/src/components/BottomBarMenu/BottomBarMenu.js" />
+        <option value="$PROJECT_DIR$/src/routes/BooksPage/BooksPage.css" />
+        <option value="$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.js" />
+        <option value="$PROJECT_DIR$/src/routes/AccountPage/AccountPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/BooksPage/BooksPage.js" />
+        <option value="$PROJECT_DIR$/src/components/BooksSortBy/BooksSortBy.css" />
+        <option value="$PROJECT_DIR$/src/components/BooksSortBy/BooksSortBy.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/container/RecommendContainer/RecommendContainer.css" />
+        <option value="$PROJECT_DIR$/src/container/RecommendContainer/RecommendContainer.js" />
+        <option value="$PROJECT_DIR$/src/routes/IndexPage/IndexPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/BookPage/BookPage.css" />
+        <option value="$PROJECT_DIR$/src/routes/ReaderPage/ReaderPag.js" />
+        <option value="$PROJECT_DIR$/src/routes/ReaderPage/ReaderPage.css" />
+        <option value="$PROJECT_DIR$/src/routes/ReaderPage/ReaderPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/EditorPage/EditorPage.css" />
+        <option value="$PROJECT_DIR$/src/routes/EditorPage/EditorPage.js" />
+        <option value="$PROJECT_DIR$/src/components/HeaderBarMenu/HeaderBarMenu.js" />
+        <option value="$PROJECT_DIR$/src/components/BookInfo/BookInfo.js" />
+        <option value="$PROJECT_DIR$/src/components/BookBanner/BookBanner.js" />
         <option value="$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.js" />
+        <option value="$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.css" />
+        <option value="$PROJECT_DIR$/src/components/BookInfo/BookInfo.css" />
+        <option value="$PROJECT_DIR$/src/components/BookBanner/BookBanner.css" />
+        <option value="$PROJECT_DIR$/src/components/SideBooksMenu/SideBooksMenu.js" />
+        <option value="$PROJECT_DIR$/src/routes/BookPage/BookPage.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="725" />
     <option name="width" value="649" />
     <option name="height" value="736" />
@@ -237,54 +255,12 @@
             <path>
               <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
               <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
               <item name="sovenok" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="BookInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="BookOfCarousel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="PageListSwitcher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="AccountContainer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="WorkContainer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
@@ -297,14 +273,7 @@
               <item name="sovenok" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="AccountPage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sovenok" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sovenok" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="HelpPage" type="462c0819:PsiDirectoryNode" />
+              <item name="BookPage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,11 +300,11 @@
       <recent name="C:\Users\Daniel\Desktop\sovenok\src\components\BookOfCarousel" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Daniel\Desktop\sovenok\src\routes\BookPage" />
+      <recent name="C:\Users\Daniel\Desktop\sovenok\src\components\BookBanner" />
+      <recent name="C:\Users\Daniel\Desktop\sovenok\public" />
       <recent name="C:\Users\Daniel\Desktop\sovenok\node_modules\react-gif-player" />
       <recent name="C:\Users\Daniel\Desktop\sovenok\src\container\AccountContainer" />
-      <recent name="C:\Users\Daniel\Desktop\sovenok\src\routes\AboutPage" />
-      <recent name="C:\Users\Daniel\Desktop\sovenok\src" />
-      <recent name="C:\Users\Daniel\Desktop\sovenok\src\routes\RegistrationPage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -379,7 +348,7 @@
       <workItem from="1573726129542" duration="2084000" />
       <workItem from="1573750960649" duration="5599000" />
       <workItem from="1573758979199" duration="10893000" />
-      <workItem from="1573842836183" duration="10369000" />
+      <workItem from="1573842836183" duration="36299000" />
     </task>
     <task id="LOCAL-00001" summary="gggg">
       <created>1573364762612</created>
@@ -413,7 +382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136495000" />
+    <option name="totallyTimeSpent" value="162425000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,12 +397,12 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13313162" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21406959" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -442,7 +411,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.1685761" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1309329" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -482,192 +451,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="Has been added Login, Registration, 404Error pages and installed Routes." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/libs/api/DB.js" />
-    <entry file="file://$PROJECT_DIR$/server/app.js" />
-    <entry file="file://$PROJECT_DIR$/server/libs/api/GET_API.js" />
-    <entry file="file://$PROJECT_DIR$/server/package.json" />
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/SearchPage/SearchPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/libs/api/GET_API.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HeaderBarMenu/logo2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HeaderBarMenu/logo.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HeaderBarMenu/logo3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RegistrationPage/RegistrationPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AboutPage/fontImage.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HeaderBarMenu/HeaderBarMenu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/BooksCarousel/BooksCarousel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/Help/Writer/HelpWriterPage.css" />
-    <entry file="file://$PROJECT_DIR$/src/routes/Help/Reader/HelpReaderPage.css" />
-    <entry file="file://$PROJECT_DIR$/src/routes/Help/Writer/HelpWriterPage.js" />
-    <entry file="file://$PROJECT_DIR$/src/routes/Help/Reader/HelpReaderPage.js" />
-    <entry file="file://$PROJECT_DIR$/src/routes/HelpPage/HelpPage.ts" />
-    <entry file="file://$PROJECT_DIR$/src/routes/SearchPage/SearchPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/HelpPage/HelpPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="21" selection-start-column="7" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainInfoTable/MainInfoTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AboutPage/AboutPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AboutPage/AboutPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HeaderBarMenu/HeaderBarMenu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="82" column="137" selection-start-line="82" selection-start-column="137" selection-end-line="82" selection-end-column="137" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/IndexPage/IndexPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding>
-            <element signature="e#1#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Loading/Loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-dom/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-gif-player/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="40" lean-forward="true" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-gif-player/dist/gifplayer.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-gif-player/dist/gifplayer.js">
+    <entry file="file://$PROJECT_DIR$/build/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="16990" lean-forward="true" selection-start-column="16990" selection-end-column="16990" />
+          <caret column="37" selection-start-column="37" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-gif-player/src/GifPlayer.js">
+    <entry file="file://$PROJECT_DIR$/public/static/js/2.0e8d9c71.chunk.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-gif-player/src/GifPlayer.scss">
+    <entry file="file://$PROJECT_DIR$/public/service-worker.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-gif-player/src/index.js">
+    <entry file="file://$PROJECT_DIR$/public/robots.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-gif-player/.babelrc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/404Page/404Page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        <state relative-caret-position="210">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding>
             <element signature="n#!!block;n#scripts#0;n#!!top" />
             <element signature="n#!!block;n#eslintConfig#0;n#!!top" />
@@ -677,74 +488,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BookInfo/BookInfo.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="47" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WorkContainer/WorkContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/WorkContainer/WorkContainer.css">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainInfoTable/MainInfoTable.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainInfoTable/MainInfoTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="53" column="46" selection-start-line="53" selection-start-column="46" selection-end-line="53" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BottomBarMenu/BottomBarMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/IndexPage/IndexPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="105" selection-start-line="15" selection-start-column="105" selection-end-line="15" selection-end-column="105" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PageListSwitcher/PageListSwitcher.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AccountPage/AccountPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BookInfo/BookInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="357">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -753,40 +549,287 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/AccountPage/AccountPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        <state relative-caret-position="443">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/HelpPage/HelpPage.js">
+    <entry file="file://$PROJECT_DIR$/src/components/BooksKeyWords/BooksKeyWords.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="29" column="87" lean-forward="true" selection-start-line="29" selection-start-column="87" selection-end-line="29" selection-end-column="87" />
+        <state relative-caret-position="-255">
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BooksSortBy/BooksSortBy.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/BooksPage/BooksPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WorkContainer/WorkContainer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/container/AccountContainer/AccountContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="88" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
+        <state relative-caret-position="119">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="46" selection-end-column="19" />
           <folding>
             <element signature="e#1#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/BooksPage/BooksPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="73" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
+        <state relative-caret-position="17">
+          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/RecommendContainer/RecommendContainer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/WorkContainer/WorkContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/page.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/page.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookBanner/page.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/container/RecommendContainer/RecommendContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/AboutPage/AboutPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/HelpPage/HelpPage.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/IndexPage/IndexPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/HelpPage/HelpPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="32" column="55" lean-forward="true" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/AboutPage/AboutPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/BookPage/BookPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/ReaderPage/ReaderPag.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/EditorPage/EditorPage.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/EditorPage/EditorPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/ReaderPage/ReaderPage.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/ReaderPage/ReaderPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HeaderBarMenu/HeaderBarMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="71" column="69" selection-start-line="71" selection-start-column="69" selection-end-line="71" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BooksSortBy/BooksSortBy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookOfCarousel/BookOfCarousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookInfo/BookInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookBanner/BookBanner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookBanner/BookBanner.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SideBooksMenu/SideBooksMenu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="97" column="34" lean-forward="true" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BookInfo/BookInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/BookPage/BookPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#1387#3759#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

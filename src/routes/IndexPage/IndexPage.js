@@ -14,7 +14,7 @@ class IndexPage extends React.Component{
     render(){
         return(
             <WorkContainer>
-                {true && <MainInfoTable/>}
+                <MainInfoTable/>
                 <Grid container item
                       style={{marginTop:20}}
                       direction={"row"}

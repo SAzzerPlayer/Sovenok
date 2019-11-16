@@ -28,7 +28,7 @@ class AccountPage extends React.Component{
                         <Grid item xs><BookInfo/><br/><Divider/></Grid>
                         <Grid item xs><BookInfo/><br/><Divider/></Grid>
                         <Grid item xs><BookInfo/><br/><Divider/></Grid>
-                        <PageListSwitcher/>
+                        <PageListSwitcher ShowText={true}/>
                     </Grid>
                 </Grid>
             </AccountContainer>

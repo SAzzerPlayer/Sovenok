@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link,Divider,List,ListItem,ListItemText,Grid,Button} from "@material-ui/core";
+import {Divider,List,ListItem,ListItemText,Grid,Button} from "@material-ui/core";
+import {Link} from 'react-router-dom';
 import classes from './MainInfoTable.css';
 import FaceIcon from '@material-ui/icons/Face';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
@@ -40,7 +41,7 @@ class MainInfoTable extends React.Component{
                     <h3>Раздел помощи для :</h3>
 
                     <List component="nav" aria-label={"main"}>
-                        <Link href={"/help"} style={{color:"black"}}>
+                        <Link to={"/help"} style={{color:"black"}}>
                             <ListItem button>
                                 <FaceIcon
                                     color={"inherit"}
@@ -49,7 +50,7 @@ class MainInfoTable extends React.Component{
                             </ListItem>
                         </Link>
                         <Divider style={{margin:5}}/>
-                        <Link href={"/help"} style={{color:"black"}}>
+                        <Link to={"/help"} style={{color:"black"}}>
                             <ListItem button href={"/help/reader"}>
                                 <EmojiPeopleIcon
                                     color={"inherit"}
