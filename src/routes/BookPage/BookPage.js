@@ -1,5 +1,6 @@
 import React from 'react';
 import {Grid,Button,Badge,ExpansionPanel ,ExpansionPanelDetails,ExpansionPanelSummary,List,ListItem} from '@material-ui/core';
+import {NavLink} from 'react-router-dom';
 import classes from './BookPage.css';
 import AccountContainer from '../../container/AccountContainer/AccountContainer';
 import RecommendContainer from '../../container/RecommendContainer/RecommendContainer';
@@ -79,6 +80,18 @@ class BookPage extends React.Component{
                         <Grid item xs style={{minHeight:150}}>
                             <p>Аннотация к книге. Лалаленд Лалалендович одобряет всей душой. Не забудь поставить лайк и добавить себе в библиотечку)</p>
                         </Grid>
+                    </Grid>
+                    <Grid item xs direction={"row"} style={{color:"purple"}}>
+                        <b>В тексте имеется: </b>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Студенты</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Школа</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Заполярье</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Заполярье</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Заполярье</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Заполярье</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Заполярье</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Заполярье</NavLink>
+                        <NavLink to={"/"} style={{marginRight: 5}}>Заполярье</NavLink>
                     </Grid>
                     <Grid container item xs direction={"column"}>
                         <ExpansionPanel>

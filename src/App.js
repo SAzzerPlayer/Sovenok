@@ -13,6 +13,8 @@ import AboutPage from './routes/AboutPage/AboutPage';
 import HelpPage from './routes/HelpPage/HelpPage';
 import BooksPage from './routes/BooksPage/BooksPage';
 import BookPage from './routes/BookPage/BookPage';
+import AuthorPage from './routes/AuthorPage/AuthorPage';
+import AuthorsPage from './routes/AuthorsPage/AuthorsPage';
 import classes from './App.css';
 
 class InKey extends React.Component{
@@ -30,6 +32,8 @@ class InKey extends React.Component{
         <Route exact path={"/help"} component={HelpPage}/>
         <Route exact path={"/books"} component={BooksPage}/>
         <Route exact path={"/book"} component={BookPage}/>
+        <Route exact path={"/author"} component={AuthorPage}/>
+        <Route exact path={"/authors"} component={AuthorsPage}/>
         <Route path={"/help/reader"} component={SearchPage}/>
         <Route path={"/help/writer"} component={AboutPage}/>
 

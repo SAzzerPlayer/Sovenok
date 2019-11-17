@@ -1,0 +1,8 @@
+.Table{
+    box-shadow: rgba(0,0,0,0.15) 0px 4px 4px 0px;
+    background-color: snow;
+    padding: 15px;
+    border-radius:32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
