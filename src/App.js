@@ -15,6 +15,9 @@ import BooksPage from './routes/BooksPage/BooksPage';
 import BookPage from './routes/BookPage/BookPage';
 import AuthorPage from './routes/AuthorPage/AuthorPage';
 import AuthorsPage from './routes/AuthorsPage/AuthorsPage';
+import EditProfilePage from './routes/EditProfile/EditProfilePage';
+import EditBookPage from './routes/EditBook/EditBookPage';
+import EditorPage from './routes/EditorPage/EditorPage';
 import classes from './App.css';
 
 class InKey extends React.Component{
@@ -29,9 +32,12 @@ class InKey extends React.Component{
         <Route exact path={"/search"} component={SearchPage}/>
         <Route exact path={"/about"} component={AboutPage}/>
         <Route exact path={"/account"} component={AccountPage}/>
+        <Route exact path={"/account/edit"} component={EditProfilePage}/>
         <Route exact path={"/help"} component={HelpPage}/>
         <Route exact path={"/books"} component={BooksPage}/>
         <Route exact path={"/book"} component={BookPage}/>
+        <Route exact path={"/book/edit"} component={EditBookPage}/>
+        <Route exact path={"/book/text/edit"} component={EditorPage}/>
         <Route exact path={"/author"} component={AuthorPage}/>
         <Route exact path={"/authors"} component={AuthorsPage}/>
         <Route path={"/help/reader"} component={SearchPage}/>

@@ -3,6 +3,7 @@ import React from 'react';
 import Radium from 'radium';
 import classes from "./AccountContainer.css";
 import {Container, Grid, Divider,Button} from '@material-ui/core';
+import {NavLink} from 'react-router-dom';
 class AccountContainer extends React.Component{
     constructor(props){
         super(props);
@@ -33,8 +34,14 @@ class AccountContainer extends React.Component{
                     </Grid>
                     <Divider/>
                     <Grid container item xs={4} direction={"column"} style={{paddingLeft:15}}>
-                    <Button variant={"outlined"} style={{marginTop:10}}>Редактировать профиль</Button>
-                    <Button variant={"outlined"} style={{marginTop:10}}>Моя библиотека</Button>
+                        <Button variant={"outlined"} style={{marginTop:10}}>
+                            <NavLink style={{color:"black"}} to={"/account/edit"}>Редактировать профиль</NavLink>
+                        </Button>
+                    <Button variant={"outlined"} style={{marginTop:10}}>
+                        <NavLink style={{color:"black"}} to={"/account"}>
+                            Моя библиотека
+                        </NavLink>
+                    </Button>
                     <Button variant={"outlined"} style={{marginTop:10}}>Избранные авторы</Button>
                     <Button variant={"outlined"} style={{marginTop:10}}>Наградил</Button>
                     <Button variant={"outlined"} style={{marginTop:10}}>Мои романы</Button>

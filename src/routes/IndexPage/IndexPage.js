@@ -7,9 +7,12 @@ import BooksCarousel from '../../container/BooksCarousel/BooksCarousel';
 import BottomAboutMenu from "../../components/BottomAboutMenu/BottomAboutMenu";
 import BooksKeyWords from '../../components/BooksKeyWords/BooksKeyWords';
 import classes from "./IndexPage.css";
+import GET_API from "../../libs/api/GET_API";
 class IndexPage extends React.Component{
     constructor(props){
         super(props);
+        let param = GET_API.getParametersFromSearch(this.props.location.search,"activate");
+        console.log(param);
     }
     render(){
         return(

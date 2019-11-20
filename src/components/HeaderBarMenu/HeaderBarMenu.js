@@ -18,7 +18,8 @@ class HeaderBarMenu extends React.Component{
         super(props);
         this.state = {
             isLogged: false,
-            popoverOpen:false
+            popoverOpen:false,
+            searchKey:""
         };
     }
     handleClose = () => {
@@ -79,9 +80,11 @@ class HeaderBarMenu extends React.Component{
                                         borderRadius: 16,
                                         padding: 5
                                     }}
+                                    value = {this.state.searchKey}
+                                    onChange = {(obj)=>this.setState({searchKey:obj.target.value})}
                                     placeholder={"Поиск..."}/>
                             </Tooltip>
-                            <NavLink to={"/search"} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>
+                            <NavLink to={"/search?keyword="+this.state.searchKey} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>
                                 <SearchIcon width={32} height={32}/>
                             </Button></NavLink>
                         </Box>
