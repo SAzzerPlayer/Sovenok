@@ -18,12 +18,27 @@ import AuthorsPage from './routes/AuthorsPage/AuthorsPage';
 import EditProfilePage from './routes/EditProfile/EditProfilePage';
 import EditBookPage from './routes/EditBook/EditBookPage';
 import EditorPage from './routes/EditorPage/EditorPage';
+import FavoritesAuthorsPage from './routes/FavoritesAuthorsPage/FavoritesAuthorsPage';
+import GradesBookPage from './routes/GradesBooksPage/GradesBookPage';
+import MyBooksPage from './routes/MyBooksPage/MyBooksPage';
+import BookStatisticPage from './routes/BookStatisticPage/BookStatisticPage';
+import CreateBookPage from './routes/CreateBookPage/CreateBookPage';
+import AdminPage from './routes/AdminPage/AdminPage';
+import AdminDelUserPage from './routes/AdminDelUserPage/AdminDelUserPage';
+import AdminDelBookPage from './routes/AdminDelBookPage/AdminDelBookPage';
+import ReaderPage from './routes/ReaderPage/ReaderPage';
 import classes from './App.css';
 
 class InKey extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
+
+    }
+  };
   render(){
     return (<div className={classes.App}>
-      <HeaderBarMenu/>
+      <Route path={'/'} component={HeaderBarMenu}/>
       <Switch>
         <Route exact path={"/"} component={IndexPage}/>
         <Route exact path={"/login"} component={LoginPage}/>
@@ -37,14 +52,21 @@ class InKey extends React.Component{
         <Route exact path={"/books"} component={BooksPage}/>
         <Route exact path={"/book"} component={BookPage}/>
         <Route exact path={"/book/edit"} component={EditBookPage}/>
+        <Route exact path={"/book/create"} component={CreateBookPage}/>
+        <Route exact path={"/book/read"} component={ReaderPage}/>
         <Route exact path={"/book/text/edit"} component={EditorPage}/>
         <Route exact path={"/author"} component={AuthorPage}/>
         <Route exact path={"/authors"} component={AuthorsPage}/>
+        <Route exact path={"/account/favorites"} component={FavoritesAuthorsPage}/>
+        <Route exact path={"/account/grades"} component={GradesBookPage}/>
+        <Route exact path={"/account/mybooks"} component={MyBooksPage}/>
+        <Route exact path={"/account/statistics"} component={BookStatisticPage}/>
+        <Route exact path={"/admin"} component={AdminPage}/>
+        <Route exact path={"/admin/users/del"} component={AdminDelUserPage}/>
+        <Route exact path={"/admin/books/del"} component={AdminDelBookPage}/>
         <Route path={"/help/reader"} component={SearchPage}/>
         <Route path={"/help/writer"} component={AboutPage}/>
-
         <Route path={"/search/:name?"} component={SearchPage}/>
-
         <Route component={Page404}/>
       </Switch>
       <BottomBarMenu/>

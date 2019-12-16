@@ -6,16 +6,22 @@ import classes from './BookBanner.css';
 class BookBanner extends React.Component{
     constructor(props){
         super(props);
-        this.state={};
+        this.state={
+            cover : require('./page.png')
+        };
+    }
+    componentDidMount(){
+        let cover = this.props.datas.cover || '';
+        if(cover.length > 10) this.setState({cover : cover});
     }
     render(){
         return(
             <Grid container item xs direction={"column"} style={{margin:10}}>
-                <img width={135} height={180} style={{backgroundColor:"skyblue"}} src={require('./page.png')}/>
+                <img width={135} height={180} style={{backgroundColor:"skyblue"}} src={this.state.cover}/>
                 <div style={{fontSize:16, color: "purple", textAlign:"center",marginBottom:0}}>
-                    <NavLink className={classes.Link} to={"/book"}><b>Алиса в стране чудес</b></NavLink>
+                    <NavLink className={classes.Link} to={"/book?book="+this.props.datas.key}><b>{this.props.datas.name}</b></NavLink>
                     <br/>
-                    <i>Лалаленд Лалалендович</i>
+                    <i>{this.props.datas.firstname + " " + this.props.datas.surname}</i>
                 </div>
             </Grid>
         );

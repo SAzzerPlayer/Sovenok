@@ -1,6 +1,6 @@
 import React from "react"
 import { EditorState, RichUtils,KeyBindingUtil } from "draft-js"
-import {Grid} from '@material-ui/core'
+import {Grid,Button,ButtonGroup} from '@material-ui/core'
 import Editor from "draft-js-plugins-editor"
 import createHighlightPlugin from './HighlightPlugin'
 import addLinkPlugin from './addLinkPlugin'
@@ -14,7 +14,8 @@ class EditorManip extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            editorState: EditorState.createEmpty(),
+            export : this.props.onChange,
+            editorState: this.props.editorState,
         }
         this.plugins = [
             highlightPlugin,
@@ -23,21 +24,21 @@ class EditorManip extends React.Component {
     }
 
     toggleBlockType = (blockType) => {
-        this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
+        this.props.onChange(RichUtils.toggleBlockType(this.props.editorState, blockType));
     };
     onAddLink = () => {
-        const editorState = this.state.editorState;
+        const editorState = this.props.editorState;
         const selection = editorState.getSelection();
         const link = window.prompt('Paste the link -')
         if (!link) {
-            this.onChange(RichUtils.toggleLink(editorState, selection, null));
+            this.props.onChange(RichUtils.toggleLink(editorState, selection, null));
             return 'handled';
         }
         const content = editorState.getCurrentContent();
         const contentWithEntity = content.createEntity('LINK', 'MUTABLE', { url: link });
         const newEditorState = EditorState.push(editorState, contentWithEntity, 'create-entity');
         const entityKey = contentWithEntity.getLastCreatedEntityKey();
-        this.onChange(RichUtils.toggleLink(newEditorState, selection, entityKey))
+        this.props.onChange(RichUtils.toggleLink(newEditorState, selection, entityKey))
     }
     onChange = (editorState) => {
         this.setState({
@@ -46,52 +47,55 @@ class EditorManip extends React.Component {
     }
 
     handleKeyCommand = (command) => {
-        const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
+        const newState = RichUtils.handleKeyCommand(this.props.editorState, command);
         if (newState) {
-            this.onChange(newState);
+            this.props.onChange(newState);
             return 'handled';
         }
         return 'not-handled';
     }
 
     onUnderlineClick = () => {
-        this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINE'));
+        this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'UNDERLINE'));
     }
 
     onBoldClick = () => {
-        this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'))
+        this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'BOLD'))
     }
 
     onItalicClick = () => {
-        this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'))
+        this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'ITALIC'))
     }
     onHighlight = () => {
-        this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'HIGHLIGHT'))
+        this.props.onChange(RichUtils.toggleInlineStyle(this.props.editorState, 'HIGHLIGHT'))
     }
 
     render() {
         return(
             <Grid container item xs direction="column" className="editorContainer" alignItems = 'center'>
-                <Grid container item xs direction={"row"} justify={"center"}>
+                {!this.props.closeTab && <Grid container item xs direction={"row"} justify={"center"} style={{margin:10}}>
+                    <ButtonGroup>
                     <BlockStyleToolbar
                         editorState={this.state.editorState}
                         onToggle={this.toggleBlockType}
                     />
-                    <button className="highlight" onClick={this.onHighlight}>
-                        <span style={{ background: "yellow" }}>H</span>
-                    </button>
-                    <button onClick={this.onUnderlineClick}>U</button>
-                    <button onClick={this.onBoldClick}><b>B</b></button>
-                    <button onClick={this.onItalicClick}><em>I</em></button>
-                    <button onClick={this.onAddLink}><em>A</em></button>
-                </Grid>
+                        <Button variant='outlined' className="highlight" onClick={this.onHighlight}>
+                            <span style={{ background: "yellow" }}>H</span>
+                        </Button>
+                        <Button variant='outlined' onClick={this.onUnderlineClick}>U</Button>
+                        <Button variant='outlined'onClick={this.onBoldClick}><b>B</b></Button>
+                        <Button variant='outlined'onClick={this.onItalicClick}><em>I</em></Button>
+                        <Button variant='outlined'onClick={this.onAddLink}><em>A</em></Button>
+                    </ButtonGroup>
+                </Grid>}
                 <Grid className="editors" container item xs direction={"row"} justify={"center"}>
                     <div className={classes.FontTable} style={{width:1000,height:400, borderWidth:1, borderStyle:'solid', borderColor:"gray",overflow:"auto"}}>
                         <Editor
                             blockStyleFn={getBlockStyle}
-                            editorState={this.state.editorState}
-                            onChange={this.onChange}
+                            editorState={this.props.editorState}
+                            onChange={(obj)=>{this.props.onChange(obj)}}
                             plugins={this.plugins}
+                            readOnly={this.props.readOnly}
                         />
                     </div>
                 </Grid>

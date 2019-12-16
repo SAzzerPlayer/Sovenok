@@ -20,7 +20,19 @@ export default class ForgotPasswordModal extends React.Component{
             else this.setState({emailCheck:false});
         };
         const handleClick = (obj) => {
-          this.setState({isSent:true})
+            this.setState({isSent:true});
+            let data = {email:this.state.email};
+            fetch("http://91.231.86.36/login/recovery",
+                {
+                    method:"POST",
+                    body:JSON.stringify(data),
+                    headers:{
+                        "Content-Type":"application/json"
+                    }
+                }).then(response=>response.json())
+                .then(responseJSON => {
+                    console.log(responseJSON);
+                })
         };
         return(
             <Modal

@@ -1,8 +1,8 @@
 import React from "react";
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import {Box,Popover,Typography,Tooltip} from "@material-ui/core";
-import {NavLink} from 'react-router-dom';
+import {Box,Popover,Typography,Tooltip,Link} from "@material-ui/core";
+import {NavLink,useHistory} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
@@ -13,13 +13,18 @@ import SideBooksMenu from '../SideBooksMenu/SideBooksMenu';
 import classes from './HeaderBarMenu.css';
 
 
+
 class HeaderBarMenu extends React.Component{
     constructor(props){
         super(props);
+        let isLogged = true;
+        if(localStorage.getItem("user")===null) isLogged = false;
         this.state = {
-            isLogged: false,
+            isLogged:isLogged,
             popoverOpen:false,
-            searchKey:""
+            searchKey:"",
+            isFullSearch:false,
+            timer : {}
         };
     }
     handleClose = () => {
@@ -32,6 +37,12 @@ class HeaderBarMenu extends React.Component{
             popoverOpen : true
         })
     };
+    componentDidMount(){
+        this.setState({timer : setInterval(()=>{
+                if(localStorage.getItem("user") !== null) this.setState({isLogged:true});
+                if(this.state.isLogged) clearInterval(this.state.timer);
+            },400)})
+    }
     render(){
         return (
             <React.Fragment>
@@ -62,9 +73,9 @@ class HeaderBarMenu extends React.Component{
                                 horizontal: 'left',
                             }}
                         >
-                            <SideBooksMenu/>
+                            <SideBooksMenu parent={this}/>
                         </Popover>
-                        <NavLink to={"/news"} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>Новости</Button></NavLink>
+                        {false && <NavLink to={"/news"} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>Новости</Button></NavLink>}
                         <NavLink to={"/authors"} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>Авторы</Button></NavLink>
 
                     </Toolbar>
@@ -81,17 +92,32 @@ class HeaderBarMenu extends React.Component{
                                         padding: 5
                                     }}
                                     value = {this.state.searchKey}
-                                    onChange = {(obj)=>this.setState({searchKey:obj.target.value})}
+                                    onChange = {
+                                        (obj)=> {
+                                            this.setState({searchKey: obj.target.value});
+                                            if (obj.target.value.length > 0) this.setState({isFullSearch: true});
+                                            else this.setState({isFullSearch:false});
+                                        }
+                                    }
                                     placeholder={"Поиск..."}/>
                             </Tooltip>
-                            <NavLink to={"/search?keyword="+this.state.searchKey} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>
-                                <SearchIcon width={32} height={32}/>
-                            </Button></NavLink>
+                            <Button disabled={!this.state.isFullSearch}>
+                                {/*<NavLink to={"/search?keyword="+this.state.searchKey} style={{color:"white"}}>*/}
+                                <Button disabled={!this.state.isFullSearch} color="inherit" style={{margin:10}}
+                                        onClick={()=>{
+                                            this.props.history.push('/')
+                                            setTimeout(()=>{this.props.history.push("/search?keyword="+this.state.searchKey)},200);
+                                        }}
+                                >
+                                    <SearchIcon width={32} height={32}/>
+                                </Button>
+                                {/*</NavLink>*/}
+                            </Button>
                         </Box>
-                        {!this.state.isLogged && <NavLink to={"/login"} style={{color:"white"}}><Button color="inherit" style={{margin:10}} onClick={()=>{this.setState({isLogged: true})}}>Вход</Button></NavLink>}
-                        {!this.state.isLogged && <NavLink to={"/registration"} style={{color:"white"}}><Button color="inherit" style={{margin:10}} >Регистрация</Button></NavLink>}
-                            {this.state.isLogged && <NavLink to={"/account"} style={{color:"white"}}><Button color="inherit" style={{margin:10}} ><AccountCircleIcon style={{marginRight:5}}/><b>Личный профиль</b></Button></NavLink>}
-                            {this.state.isLogged && <NavLink to={"/"} style={{color:"white"}}><Button color="inherit" style={{margin:10}} onClick={()=>{this.setState({isLogged: false})}}><ExitToAppIcon/></Button></NavLink>}
+                        {!this.state.isLogged && <NavLink to={"/login"} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>Вход</Button></NavLink>}
+                        {!this.state.isLogged && <NavLink to={"/registration"} style={{color:"white"}}><Button color="inherit" style={{margin:10}}>Регистрация</Button></NavLink>}
+                        {this.state.isLogged && <NavLink to={"/account"} style={{color:"white"}}><Button color="inherit" style={{margin:10}}><AccountCircleIcon style={{marginRight:5}}/><b>Личный профиль</b></Button></NavLink>}
+                        {this.state.isLogged && <Link href={"/"} style={{color:"white"}}><Button color="inherit" style={{margin:10}} onClick={()=>{localStorage.removeItem("user")}}><ExitToAppIcon/></Button></Link>}
                     </Toolbar>
                 </AppBar>
             </React.Fragment>
@@ -100,35 +126,3 @@ class HeaderBarMenu extends React.Component{
 }
 
 export default HeaderBarMenu;
-/*render(){
-        return(
-            <div className={classes.HeaderBarMenu}>
-                <div className={classes.Navigation}>
-                    <div className={classes.Section}>
-                        Лого
-                    </div>
-                    <div className={classes.Section}>
-                        Книги
-                    </div>
-                    <div className={classes.Section}>
-                        Авторы
-                    </div>
-                    <div className={classes.Section}>
-                        Новости
-                    </div>
-                </div>
-                <div className={classes.Account}>
-                    <div className={classes.Section}>
-                        <input style={{margin:5}}/>
-                        <button>Поиск</button>
-                    </div>
-                    <button className={classes.Section}>
-                        Вход
-                    </button>
-                    <button className={classes.Section}>
-                        Регистрация
-                    </button>
-                </div>
-            </div>
-        );
-    }*/

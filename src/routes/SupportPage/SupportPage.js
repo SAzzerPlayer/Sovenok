@@ -1,6 +1,6 @@
 import React from 'react';
 import WorkContainer from '../../container/WorkContainer/WorkContainer';
-import {Grid,Container,Button,Snackbar} from '@material-ui/core';
+import {Grid,Container,Button,Snackbar,Tooltip} from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import classes from "./SupportPage.css";
 import TextField from '@material-ui/core/TextField';
@@ -26,7 +26,7 @@ class SupportPage extends React.Component{
     }
     render(){
 
-        const SendLetter = async () => {
+        const SendLetter = () => {
             const data = {
                 email:this.state.email,
                 first:this.state.firstname,
@@ -34,17 +34,12 @@ class SupportPage extends React.Component{
                 text:this.state.text,
                 theme:this.state.theme
             };
-            let query = await fetch("http://91.231.86.36/feedback", {
+            fetch("http://91.231.86.36/feedback/", {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, cors, *same-origin
-                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'same-origin', // include, *same-origin, omit
                 headers: {
                     'Content-Type': 'application/json',
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                redirect: 'follow', // manual, *follow, error
-                referrer: 'no-referrer', // no-referrer, *client
                 body: JSON.stringify(data), // тип данных в body должен соответвовать значению заголовка "Content-Type"
             })
                 .then(response => response.json())
@@ -97,51 +92,58 @@ class SupportPage extends React.Component{
                           >
                         <Grid item xs justify={"center"} alignContent={"center"} direction={"row"}>
                             <b>Имя</b>
-                            <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            error={this.state.firstnameCheck}
-                            fullWidth
-                            id="firstname"
-                            label="Имя"
-                            name="firstname"
-                            value={this.state.firstname}
-                            onChange = {checkFirstName}
-                            autoFocus
-                        /></Grid>
-                        <Grid item xs>
-                            <b>Фамилия</b>
-                            <TextField
+                            <Tooltip title={"Введите ваше имя. Допустимы символы кириллицы и латиницы"}>
+                                <TextField
                                 variant="outlined"
                                 margin="normal"
                                 required
+                                error={this.state.firstnameCheck}
                                 fullWidth
-                                id="surname"
-                                label="Фамилия"
-                                error={this.state.surnameCheck}
-                                value={this.state.surname}
-                                onChange={checkSurname}
-                                name="surname"
+                                id="firstname"
+                                label="Имя"
+                                name="firstname"
+                                value={this.state.firstname}
+                                onChange = {checkFirstName}
                                 autoFocus
-                            />
+                                />
+                            </Tooltip>
+                        </Grid>
+                        <Grid item xs>
+                            <b>Фамилия</b>
+                            <Tooltip title={"Введите вашу фамилию. Допустимы символы кириллицы и латиницы"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="surname"
+                                    label="Фамилия"
+                                    error={this.state.surnameCheck}
+                                    value={this.state.surname}
+                                    onChange={checkSurname}
+                                    name="surname"
+                                    autoFocus
+                                />
+                            </Tooltip>
                         </Grid>
                         <Grid item xs>
                             <b>Электронная почта</b>
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="email"
-                                label="Электронная почта"
-                                error={this.state.emailCheck}
-                                value={this.state.email}
-                                onChange={checkEmail}
-                                name="email"
-                                autoComplete="email"
-                                autoFocus
-                            />
+                            <Tooltip title={"Введите вашу электронную почту"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="email"
+                                    label="Электронная почта"
+                                    error={this.state.emailCheck}
+                                    value={this.state.email}
+                                    onChange={checkEmail}
+                                    name="email"
+                                    autoComplete="email"
+                                    autoFocus
+                                />
+                            </Tooltip>
                         </Grid>
                     </Grid>
                     <Grid container item
@@ -175,25 +177,27 @@ class SupportPage extends React.Component{
                           >
                         <Grid item xs>
                             <b>Письмо</b>
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                id="text"
-                                label="Текст письма"
-                                error={this.state.textCheck}
-                                value={this.state.text}
-                                onChange = {(obj)=>{
-                                    this.setState({text:obj.target.value});
-                                    if(obj.target.value.length === 0)this.setState({textCheck : true})
-                                    else this.setState({textCheck:false});
-                                }}
-                                name="text"
-                                autoFocus
-                                fullWidth
-                                rows={10}
-                                multiline
-                            />
+                            <Tooltip title={"Опишите вашу проблему"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    id="text"
+                                    label="Текст письма"
+                                    error={this.state.textCheck}
+                                    value={this.state.text}
+                                    onChange = {(obj)=>{
+                                        this.setState({text:obj.target.value});
+                                        if(obj.target.value.length === 0)this.setState({textCheck : true})
+                                        else this.setState({textCheck:false});
+                                    }}
+                                    name="text"
+                                    autoFocus
+                                    fullWidth
+                                    rows={10}
+                                    multiline
+                                />
+                            </Tooltip>
                         </Grid>
                     </Grid>
                     <Grid container item
@@ -210,7 +214,7 @@ class SupportPage extends React.Component{
                                 !this.state.emailCheck && !this.state.themeCheck &&
                                     !this.state.textCheck){
                                     this.setState({snackWaitOpen:true})
-                                //    SendLetter();
+                                    SendLetter();
                                 }
                                 else this.setState({snackWarnOpen:true})
                             }}

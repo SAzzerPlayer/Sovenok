@@ -1,5 +1,6 @@
 import React from 'react';
-import {Grid,Divider,List,ListItem,Link} from '@material-ui/core';
+import {Grid,Divider,List,ListItem} from '@material-ui/core';
+import {NavLink} from 'react-router-dom'
 import classes from './SearchPage.css';
 import GET_API from '../../libs/api/GET_API';
 import WorkContainer from "../../container/WorkContainer/WorkContainer";
@@ -9,79 +10,41 @@ class SearchPage extends React.Component{
     constructor(props){
         super(props);
         let param = GET_API.getParametersFromSearch(this.props.location.search,"keyword");
-        this.state={
+        this.state= {
             keyWord: param,
             show: false,
-            SearchingEnd:false,
+            SearchingEnd: false,
             books: [],
             authors: [],
             keybooks: [],
-            CMPbooks: ()=>{},
-            CMPauthors: ()=>{},
-            CMPkeys: ()=>{}
-        };
+            booksIsEmpty: false,
+            authorsIsEmpty: false,
+            keysIsEmpty: false,
+            key:''
+        }
     }
     componentDidMount() {
-        let query = fetch("http://91.231.86.36/search?key="+this.state.keyWord,{
+        fetch("http://91.231.86.36/search?key="+this.state.keyWord,{
             method: 'GET', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, cors, *same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
             headers: {
                 'Content-Type': 'application/json',
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            redirect: 'follow', // manual, *follow, error
-            referrer: 'no-referrer', // no-referrer, *client
+            }
         })
             .then(response=>response.json())
             .then(responseJSON=>{
-                this.setState({books:responseJSON.books,authors:responseJSON.authors,keybooks:responseJSON.keyBooks});
-                this.setState({
-                CMPbooks:()=>{
-                    this.state.books.map((currentArr)=>{
-                        return(
-                            <ListItem>
-                                <Link>
-                                    <FiberManualRecordIcon style={{fontSize:12}}/>
-                                    {currentArr.name}
-                                </Link>
-                            </ListItem>
-                            );
-                        })
-                    },
-                CMPauthors:()=>{
-                    this.state.authors.map((currentArr)=>{
-                        return(
-                            <ListItem>
-                                <Link>
-                                    <FiberManualRecordIcon style={{fontSize:12}}/>
-                                    {currentArr.firstname+" "+currentArr.surname}
-                                </Link>
-                            </ListItem>
-                        );
-                    })
-                },
-                CMPkeys:()=>{
-                    this.state.keybooks.map((currentArr)=>{
-                        return(
-                            <ListItem>
-                                <Link>
-                                    <FiberManualRecordIcon style={{fontSize:12}}/>
-                                    {currentArr.name}
-                                </Link>
-                            </ListItem>
-                        );
-                    })
-                }
-                });
+                console.log(responseJSON);
+                this.setState({books:responseJSON.books || [],authors:responseJSON.authors || [],keybooks:responseJSON.keyBooks || [],key:responseJSON.key});
+                console.log(this.state);
+                if(this.state.books.length === 0){ this.setState({booksIsEmpty:true })}
+                if(this.state.authors.length === 0) this.setState({authorsIsEmpty:true});
+                if(this.state.keybooks.length === 0) this.setState({keysIsEmpty:true});
                 this.setState({SearchingEnd:true});
             })
     }
 
 
     render(){
-        const SearchInsides = () => {
+        const SearchInsides = (props) => {
             return (
                 <Grid className={classes.Table} container
                       xs={12}
@@ -91,36 +54,81 @@ class SearchPage extends React.Component{
                 >
 
                     <Grid item xs><h1>Результаты поиска:</h1></Grid>
-                    <Grid item xs>Поиск по фразе: <b>{this.state.keyWord}</b></Grid>
+                    <Grid item xs>Поиск по фразе: <b>{this.state.key}</b></Grid>
                     <Grid item xs>Найдено: {this.state.authors.length} пользователей, {this.state.books.length} книг, {this.state.keybooks.length} книг по ключевой фразе</Grid>
                     <Divider/>
-                    {this.state.show && <Grid item xs>По данной ключевой фразе ничего не найдено.</Grid>}
+                    {
+                        this.state.booksIsEmpty &&
+                        this.state.authorsIsEmpty &&
+                        this.state.keysIsEmpty &&
+                        <Grid item xs>По данной ключевой фразе ничего не найдено.</Grid>
+                    }
                     <Grid container item xs direction={"column"} spacing={0}>
-                        <Grid xs item><h2>Найдены такие книги:</h2></Grid>
+                        {!this.state.booksIsEmpty &&
+                        <Grid xs item><h2>Найдены такие книги:</h2></Grid>}
+                        {!this.state.booksIsEmpty &&
                         <Grid xs item><List>
-                            {this.state.CMPbooks()}
+                            {
+                                this.state.books.map((currentArr) => {
+                                    return (
+                                        <ListItem>
+                                            <NavLink to={"/book?book="+currentArr.key}>
+                                                <FiberManualRecordIcon style={{fontSize: 12}}/>
+                                                {currentArr.name}
+                                            </NavLink>
+                                        </ListItem>
+                                    );
+                                })
+                            }
                         </List>
                         </Grid>
+                        }
+                        {!this.state.authorsIsEmpty &&
                         <Grid xs item>
                             <Divider/>
                             <h2>Найдены такие авторы:</h2>
+                        </Grid>}
+                        {!this.state.authorsIsEmpty && <Grid xs item>
+                            {
+                                this.state.authors.map((currentArr) => {
+                                    return (
+                                        <ListItem>
+                                            <NavLink to={'/author?user='+currentArr.id}>
+                                                <FiberManualRecordIcon style={{fontSize: 12}}/>
+                                                {currentArr.firstname + " " + currentArr.surname}
+                                            </NavLink>
+                                        </ListItem>
+                                    );
+                                })
+                            }
                         </Grid>
-                        <Grid xs item>
-                            {this.state.CMPauthors()}
-                        </Grid>
+                        }
+                        {!this.state.keysIsEmpty &&
                         <Grid xs item>
                             <Divider/>
                             <h2>Найдены такие книги по ключу:</h2>
-                        </Grid>
-                        <Grid xs item>
+                        </Grid>}
+                        {!this.state.keysIsEmpty && <Grid xs item>
                             <List>
-                                {this.state.CMPkeys()}
+                                {
+                                    this.state.keybooks.map((currentArr) => {
+                                        return (
+                                            <ListItem>
+                                                <NavLink to={'/book?book='+currentArr.key}>
+                                                    <FiberManualRecordIcon style={{fontSize: 12}}/>
+                                                    {currentArr.name}
+                                                </NavLink>
+                                            </ListItem>
+                                        );
+                                    })
+                                }
                             </List>
                         </Grid>
+                        }
                     </Grid>
                 </Grid>
             );
-        }
+        };
         const Loading = () => {
             return (
                 <Grid className={classes.Table} container
@@ -136,6 +144,7 @@ class SearchPage extends React.Component{
         return(
             <WorkContainer >
                 {!this.state.SearchingEnd && <Loading/>}
+                {this.state.SearchingEnd && <SearchInsides/>}
             </WorkContainer>
         );
     }

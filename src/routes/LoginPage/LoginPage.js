@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link} from '@material-ui/core';
+import {Link,Tooltip} from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
-import {NavLink} from 'react-router-dom';
+import {NavLink,Redirect} from 'react-router-dom';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import LockIcon from '@material-ui/icons/Lock';
@@ -20,10 +20,13 @@ export default class SignInSide extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            ////////
             email : '',
             emailCheck : false,
+            //////////
             pass: '',
             passCheck : false,
+            //////////
             snackWarnOpen: false,
             snackLoginOpen: false,
             snackUnExistOpen:false,
@@ -33,39 +36,37 @@ export default class SignInSide extends React.Component{
 
         };
     }
-    render() {
-        const Login = async () => {
-            const data = {
-                email:this.state.email,
-                pass: this.state.pass
-            };
-            let query = fetch("http://91.231.86.36/login?email="+data.email+"&pass="+data.pass,{
-                method: 'GET', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, cors, *same-origin
-                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'same-origin', // include, *same-origin, omit
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                redirect: 'follow', // manual, *follow, error
-                referrer: 'no-referrer', // no-referrer, *client
-            })
-                .then((response)=>response.json())
-                .then((responseJSON) => {
-                    if(responseJSON.isExisted === true){
-                        if(responseJSON.validPass === true){
-                            //Внесение в локал хранилище и переход в аккаунт пользователя
-                        }
-                        else{
-                            this.setState({snackNonValid:true});
-                        }
+    Login(){
+        const data = {
+            email:this.state.email,
+            pass: this.state.pass
+        };
+        fetch("http://91.231.86.36/login/?email="+data.email+"&pass="+data.pass,{
+            headers:{
+                "Access-Control-Allow-Origin":"http://91.231.86.36"
+            }
+        })
+            .then((response)=>response.json())
+            .then((responseJSON) => {
+                if(responseJSON.isExisted === true){
+                    if(responseJSON.validPass === true){
+                        //Внесение в локал хранилище и переход в аккаунт пользователя
+                        this.setState({snackLoginOpen:false});
+                        localStorage.setItem("user",JSON.stringify(responseJSON.user));
+                        console.log(this.props);
+                        this.props.history.push("/account");
                     }
                     else{
-                        this.setState({snackUnExist:true});
+                        this.setState({snackNonValidOpen:true});
                     }
-                })
-        };
+                }
+                else{
+                    this.setState({snackUnExistOpen:true});
+                }
+            })
+            .catch((err)=>{console.log(err);})
+    }
+    render() {
         const checkEmail = (obj) => {
             let regExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
             this.setState({email:obj.target.value});
@@ -73,7 +74,7 @@ export default class SignInSide extends React.Component{
             else this.setState({emailCheck:false});
         };
         const checkPass = (obj) => {
-            let regExp = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+            let regExp = /(?=.*[0-9])(?=.*[!@$%^*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@$%^*]{6,}/g;
             this.setState({pass:obj.target.value});
             if(obj.target.value.match(regExp) === null || obj.target.value.length === 0) this.setState({passCheck:true});
             else this.setState({passCheck:false});
@@ -93,39 +94,39 @@ export default class SignInSide extends React.Component{
                         <Typography component="h1" variant="h5">
                             Авторизация
                         </Typography>
-
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="email"
-                                label="Электронная почта"
-                                value = {this.state.email}
-                                check = {this.state.emailCheck}
-                                onChange = {checkEmail}
-                                name="email"
-                                autoComplete="email"
-                                autoFocus
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Пароль"
-                                type="password"
-                                value = {this.state.pass}
-                                error = {this.state.passCheck}
-                                onChange = {checkPass}
-                                id="password"
-                                autoComplete="current-password"
-                            />
-                            <div style={{alignItems:"flex-start"}}>
-                                <Checkbox value={this.state.remember} color="primary"
-                                onChange={(obj)=>{this.setState({remember:obj.target.checked})}}/>Запомнить меня
-                            </div>
+                            <Tooltip title={"Введите вашу электронную почту"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="email"
+                                    label="Электронная почта"
+                                    value = {this.state.email}
+                                    check = {this.state.emailCheck}
+                                    onChange = {checkEmail}
+                                    name="email"
+                                    autoComplete="email"
+                                    autoFocus
+                                />
+                            </Tooltip>
+                            <Tooltip title={"Пароль должен содержать 1 символ нижнего и верхнего регистра, 1 цифру и 1 спец.символ." +
+                            " Длина пароля не менее 6 символов."}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="password"
+                                    label="Пароль"
+                                    type="password"
+                                    value = {this.state.pass}
+                                    error = {this.state.passCheck}
+                                    onChange = {checkPass}
+                                    id="password"
+                                    autoComplete="current-password"
+                                />
+                            </Tooltip>
                             <Button
                                 type="submit"
                                 fullWidth
@@ -133,8 +134,13 @@ export default class SignInSide extends React.Component{
                                 color="primary"
                                 className={classes.submit}
                                 onClick = {()=>{
-                                    if(this.state.emailCheck || this.state.passCheck) this.setState({snackWarnOpen:true});
-                                    else this.setState({snackLoginOpen:true});
+                                    if(this.state.emailCheck || this.state.passCheck) {
+                                        this.setState({snackWarnOpen: true});
+                                    }
+                                    else {
+                                        this.setState({snackLoginOpen:true});
+                                        this.Login();
+                                    }
                                 }}
                             >
                                 Войти

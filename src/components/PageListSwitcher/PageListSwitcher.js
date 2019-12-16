@@ -13,14 +13,29 @@ class PageListSwitcher extends React.Component{
                 direction={"row"}
                   justify={"space-between"}
             >
-                <Grid item xs={3}><Button variant={"outlined"}><KeyboardBackspaceIcon style={{fontSize:18}}/>
+                <Grid item xs={3}>
+                    <Button
+                        variant={"outlined"}
+                        onClick={this.props.handleBack}
+                        disabled={this.props.disBack}
+                    >
+                    <KeyboardBackspaceIcon style={{fontSize:18}}/>
                     {this.state.ShowText && "Назад"}
                 </Button></Grid>
                 <Grid item xs={6}/>
 
-                <Grid container item xs={3} justify={"flex-end"}><Button variant={"outlined"}>
-                    {this.state.ShowText && "Вперёд"}
-                    <ArrowRightAltIcon/></Button></Grid>
+                <Grid item xs={3}>
+                    <Grid container item xs justify={"flex-end"}>
+                        <Button
+                            variant={"outlined"}
+                            onClick={this.props.handleNext}
+                            disabled={this.props.disNext}
+                        >
+                        {this.state.ShowText && "Вперёд"}
+                        <ArrowRightAltIcon/>
+                        </Button>
+                    </Grid>
+                </Grid>
             </Grid>
         );
     }

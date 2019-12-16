@@ -48,7 +48,7 @@ export default class BlockStyleToolbar extends React.Component {
                     active={type.style === blockType}
                     label={type.label}
                     onToggle={this.props.onToggle}
-                    style={type.style}
+                    //style={type.style}
                     key={type.label}
                     type={type}
                 />

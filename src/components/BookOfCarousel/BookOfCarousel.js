@@ -5,15 +5,26 @@ import classes from './BookOfCarousel.css';
 class BookOfCarousel extends React.Component{
     constructor(props){
         super(props);
-        this.state= {"genre":"Фантастика"};
+        this.state={
+            cover:require('./page.png'),
+            isLoaded:false
+        };
+        console.log(this.props.data);
+
+    }
+    componentDidMount(){
+        if(this.props.cover.trim().length > 10){
+            this.setState({cover:this.props.cover});
+            console.log("WasChanged")
+        }
     }
     render(){
         return(
             <Grid item xs={2}>
-                <img width={90} height={120} src={require('./page.png')} style={{backgroundColor:"skyblue"}}/>
-                <Typography style={{fontSize:9, color:'grey'}}>{this.state.genre}</Typography>
-                <NavLink className={classes.Link} to={"/book"}><Typography style={{fontSize:12}}>Алиса в стране чудес</Typography></NavLink>
-                <Typography style={{fontSize:10, color:"purple"}}>Лалаленд Лалалендович</Typography>
+                <img width={90} height={120} src={this.state.cover} style={{backgroundColor:"skyblue"}}/>
+                <Typography style={{fontSize:9, color:'grey'}}>{this.props.data.genre}</Typography>
+                <NavLink className={classes.Link} to={"/book/?book="+this.props.data.key}><Typography style={{fontSize:12}}>{this.props.data.name}</Typography></NavLink>
+                <Typography style={{fontSize:10, color:"purple"}}>{this.props.data.firstname +" "+this.props.data.surname} </Typography>
             </Grid>
         );
     }

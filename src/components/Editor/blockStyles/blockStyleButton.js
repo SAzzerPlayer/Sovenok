@@ -1,4 +1,5 @@
 import React from "react"
+import {Button} from '@material-ui/core'
 class BlockStyleButton extends React.Component {
     onToggle = (e) => {
         e.preventDefault()
@@ -10,11 +11,13 @@ class BlockStyleButton extends React.Component {
             className += " RichEditor-activeButton"
         }
         return (
-            <button onClick={this.onToggle}>
+            <Button
+                variant={'outlined'}
+                onClick={this.onToggle}>
                 <span >
                     {this.props.label}
                 </span>
-            </button>
+            </Button>
         );
     }
 }

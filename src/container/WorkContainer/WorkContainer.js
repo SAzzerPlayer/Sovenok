@@ -1,7 +1,6 @@
 import React from 'react';
-import Radium from 'radium';
 import classes from "./WorkContainer.css";
-import {Container, Grid, Typography} from '@material-ui/core';
+import { Grid} from '@material-ui/core';
 class WorkContainer extends React.Component{
     constructor(props){
         super(props);
@@ -17,7 +16,7 @@ class WorkContainer extends React.Component{
             >
                 <Grid item xs={1}>
                 </Grid>
-                <Grid item lg={10} maxWidth={"lg"}>
+                <Grid item lg={10}>
                     {this.props.children}
                 </Grid>
                 <Grid item xs={1}>
@@ -27,4 +26,4 @@ class WorkContainer extends React.Component{
     }
 }
 
-export default Radium(WorkContainer);
+export default WorkContainer;

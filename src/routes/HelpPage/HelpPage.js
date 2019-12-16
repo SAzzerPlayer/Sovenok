@@ -35,6 +35,9 @@ class HelpPage extends React.Component{
                                         <ListItem button>1. Вход</ListItem>
                                         <ListItem button>2. Регистрация</ListItem>
                                         <ListItem button>3. Чтение</ListItem>
+                                        <ListItem button>4. Автор</ListItem>
+                                        <ListItem button>5. Обратная связь</ListItem>
+                                        <ListItem button>6. Поиск</ListItem>
                                     </List>
                                 </ExpansionPanelDetails>
                             </ExpansionPanel>
@@ -46,18 +49,20 @@ class HelpPage extends React.Component{
                                 </ExpansionPanelSummary>
                                 <ExpansionPanelDetails>
                                     <List>
-                                        <ListItem button>1. Вход</ListItem>
-                                        <ListItem button>2. Регистрация</ListItem>
-                                        <ListItem button>3. Чтение</ListItem>
+                                        <ListItem button>1. Как стать автором</ListItem>
+                                        <ListItem button>2. Добавление новой книги</ListItem>
+                                        <ListItem button>3. Редактирование книги</ListItem>
+                                        <ListItem button>4. Статистика книги</ListItem>
+                                        <ListItem button>5. Редагування розділів</ListItem>
                                     </List>
                                 </ExpansionPanelDetails>
                             </ExpansionPanel>
                         </Grid>
                     </Grid>
-                    <Grid container item xs={8} direction={"column"} alignItems="center" >
+                    <Grid container item xs={8} direction={"column"} alignItems="center" className={classes.Table} style={{textAlign:"center"}}>
 
-                            <h2>Оглавление раздела</h2>
-                            <h3>Информация раздела</h3>
+                            <h2>Раздел "Помощь"</h2>
+                        <h3>Здесь собраны основные ответы на вопросы и инструкции по использованию сайтом.</h3><h3> Чтобы получить полную информацию относительно вашего вопроса, пожалуйста, выберите нужный вопрос или раздел. </h3>
                     </Grid>
                 </Grid>
             </WorkContainer>

@@ -3,7 +3,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-
+import {Tooltip} from '@material-ui/core';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
@@ -38,35 +38,43 @@ export default class SignInSide extends React.Component {
         }
     }
     render() {
-        const Register = async () => {
+        const Register = () => {
             const data = {
                 email : this.state.email,
                 first: this.state.first,
                 surname: this.state.surname,
                 pass: this.state.pass
             };
-            let query = await fetch("http://91.231.86.36/register", {
+            console.log(data);
+            fetch("http://91.231.86.36/register", {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, cors, *same-origin
-                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'same-origin', // include, *same-origin, omit
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                redirect: 'follow', // manual, *follow, error
-                referrer: 'no-referrer', // no-referrer, *client
-                body: JSON.stringify(data), // тип данных в body должен соответвовать значению заголовка "Content-Type"
+                body: JSON.stringify(data), // тип данных в body должен соответвовать значению заголовка
+                headers:{
+                    "Content-Type":"application/json"
+                }
+
             })
                 .then(response => response.json())
                 .then(responseJSON => {
                     if(responseJSON.isExisted === false) {
                         this.setState({snackWaitOpen: false, snackFinishOpen: true});
+                        this.state = {
+                            email: '',
+                            emailCheck: false,
+                            pass: '',
+                            passCheck: false,
+                            rePass: '',
+                            rePassCheck: false,
+                            first: '',
+                            firstCheck: false,
+                            surname: ''
+                        }
                     }
                     else{
                         this.setState({snackErrOpen:true});
                     }
-                });
+                })
+                .catch((err)=>{console.log(err);})
         };
         const checkFirstName = (obj) => {
             console.log(obj);
@@ -90,13 +98,13 @@ export default class SignInSide extends React.Component {
             else this.setState({emailCheck:false});
         };
         const checkPass = (obj) => {
-            let regExp = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+            let regExp = /(?=.*[0-9])(?=.*[!@$%^*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@$%^*]{6,}/g;
             this.setState({pass:obj.target.value});
             if(obj.target.value.match(regExp) === null || obj.target.value.length === 0) this.setState({passCheck:true});
             else this.setState({passCheck:false});
         };
         const checkRePass = (obj) => {
-            let regExp = /(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g;
+            let regExp = /(?=.*[0-9])(?=.*[!@$%^*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@$%^*]{6,}/g;
             this.setState({rePass:obj.target.value});
             if(obj.target.value.match(regExp) === null || obj.target.value.length === 0) this.setState({rePassCheck:true});
             else this.setState({rePassCheck:false});
@@ -114,71 +122,82 @@ export default class SignInSide extends React.Component {
                             Регистрация
                         </Typography>
                         <div className={classes.form}>
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                id="email"
-                                label="Электронная почта"
-                                name="email"
-                                value={this.state.email}
-                                error={this.state.emailCheck}
-                                onChange={checkEmail}
-                                autoComplete="email"
-                                autoFocus
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Пароль"
-                                type="password"
-                                id="password"
-                                value={this.state.pass}
-                                error={this.state.passCheck}
-                                onChange={checkPass}
-                                autoComplete="current-password"
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="re-password"
-                                label="Повторите пароль"
-                                type="password"
-                                id="re-password"
-                                value={this.state.rePass}
-                                error={this.state.rePassCheck}
-                                onChange={checkRePass}
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="firstname"
-                                label="Имя"
-                                id="firstname"
-                                value={this.state.first}
-                                error={this.state.firstCheck}
-                                onChange={checkFirstName}
-                            />
-                            <TextField
-                                variant="outlined"
-                                margin="normal"
-                                required
-                                fullWidth
-                                name="surname"
-                                label="Фамилия"
-                                id="surname"
-                                value={this.state.surname}
-                                error={this.state.surnameCheck}
-                                onChange={checkSurname}
-                            />
+                            <Tooltip title={"Введите вашу электронную почту"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    id="email"
+                                    label="Электронная почта"
+                                    name="email"
+                                    value={this.state.email}
+                                    error={this.state.emailCheck}
+                                    onChange={checkEmail}
+                                    autoComplete="email"
+                                    autoFocus
+                                />
+                            </Tooltip>
+                            <Tooltip title={"Пароль должен содержать 1 символ нижнего и верхнего регистра, 1 цифру и 1 спец.символ. +\n" +
+                            "  Длина пароля не менее 6 символов."}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="password"
+                                    label="Пароль"
+                                    type="password"
+                                    id="password"
+                                    value={this.state.pass}
+                                    error={this.state.passCheck}
+                                    onChange={checkPass}
+                                    autoComplete="current-password"
+                                />
+                            </Tooltip>
+                            <Tooltip title={"Повторите ваш пароль"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="re-password"
+                                    label="Повторите пароль"
+                                    type="password"
+                                    id="re-password"
+                                    value={this.state.rePass}
+                                    error={this.state.rePassCheck}
+                                    onChange={checkRePass}
+                                />
+                            </Tooltip>
+                            <Tooltip title={"Введите ваше имя. Допустимы символы киррилицы и латиницы. Не допускаются цифры"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="firstname"
+                                    label="Имя"
+                                    id="firstname"
+                                    value={this.state.first}
+                                    error={this.state.firstCheck}
+                                    onChange={checkFirstName}
+                                />
+                            </Tooltip>
+                            <Tooltip title={"Введите вашу фамилию. Допустимы символы киррилицы и латиницы. Не допускаются цифры"}>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    fullWidth
+                                    name="surname"
+                                    label="Фамилия"
+                                    id="surname"
+                                    value={this.state.surname}
+                                    error={this.state.surnameCheck}
+                                    onChange={checkSurname}
+                                />
+                            </Tooltip>
                             <Button
                                 type="submit"
                                 fullWidth
@@ -201,7 +220,7 @@ export default class SignInSide extends React.Component {
                                         }
                                         else {
                                             this.setState({snackRegisterOpen: true})
-
+                                            Register();
                                         }
                                     }
                                 }}

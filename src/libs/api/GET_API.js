@@ -3,7 +3,7 @@ class GET_API{
 
     }
     static getParametersFromSearch(search,key){
-        let temp;
+        let temp="";
         if(search.indexOf(key)!==-1){
             temp="";
             for(let i=search.indexOf(key)+key.length;i<search.length;i++){
@@ -13,7 +13,7 @@ class GET_API{
                 if(search[i]!=="="){temp+=search[i]}
             }
         }
-        else temp=null;
+        else temp="";
         console.log(temp);
         return temp;
     }

@@ -1,11 +1,22 @@
 import React from 'react';
-import {Button, Divider, Grid} from '@material-ui/core';
+import {Divider, Grid} from '@material-ui/core';
 import classes from './RecommendContainer.css';
 import BookBanner from '../../components/BookBanner/BookBanner';
 class RecommendContainer extends React.Component{
     constructor(props){
         super(props);
-        this.state={};
+        this.state={
+            showBooks:[],
+            genre : ''
+        };
+    }
+    componentDidMount(){
+        fetch("http://91.231.86.36/books/get/random")
+            .then((response)=>{return response.json();})
+            .then((responseJSON) => {
+                this.setState({showBooks:responseJSON.Books, genre:responseJSON.Genre})
+                console.log("Random", responseJSON);
+            });
     }
     render(){
         return(
@@ -23,12 +34,12 @@ class RecommendContainer extends React.Component{
                 </Grid>
                 <Grid container item lg={2} style={{marginTop:5,paddingLeft:25,backgroundColor:"snow"}} direction={"column"} spacing={1} className={classes.Table}>
                     <Divider/>
-                    <h3>ТОП фантастика</h3>
+                    <h3>ТОП {this.state.genre}</h3>
                     <Divider/>
                     <Grid container item xs={5} direction={"column"} style={{paddingLeft:15}}>
-                        <BookBanner/>
-                        <BookBanner/>
-                        <BookBanner/>
+                        {this.state.showBooks.map((currElem,index,array)=>{
+                            return <BookBanner datas={currElem}/>
+                        })}
                     </Grid>
                     <Divider/>
                 </Grid>
